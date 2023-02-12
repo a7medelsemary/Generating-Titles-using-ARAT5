@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Generate Arabic Titles
+    </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+
+
+<body>
+
+    <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/365/7540362365_cfe03589-c654-443c-b578-66d4b557b3d6.png?cb=1656876154" />
+    <br>
+
+    <form action="titles" method="post">
+        <div style="background-color:rgb(156, 162, 166);color:white;padding:20px;">
+            {% for message in get_flashed_messages()%}
+            <p>{{message}}</p>
+            {% endfor %}
+            <br>
+        </div>
+        <input type="text" name="text_input">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Generate" id="titles">
+
+    </form>
+
+</body>
+<style>
+    body {
+        background-image: url('https://previews.123rf.com/images/oapril/oapril1501/oapril150100075/35709452-grey-watercolor-background.jpg');
+        /*filter: blur(8px);
+        -webkit-filter: blur(8px);
+        height: 100%;
+        /* Center and scale the image nicely 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;*/
+        backdrop-filter: blur(20px);
+    }
+</style>
+
+</html>
